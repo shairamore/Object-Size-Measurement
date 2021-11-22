@@ -1,5 +1,9 @@
 #importing the libraries
+from scipy.spatial.distance import euclidean
+from imutils import perspective
+from imutils import contours
 import numpy as np
+import imutils
 import cv2
 
 #storing the image in a variable
@@ -19,3 +23,19 @@ img_edge = cv2.erode(img_edge, None, iterations=1)
 cv2.imshow('Preprocessed Image - Example 1',img_edge)
 cv2.waitKey(0) 
 
+
+#Object Segmentation
+# Finding Contours
+cnts = cv2.findContours(img_edge.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)  
+cnts = imutils.grab_contours(cnts)
+
+# Sort contours from left to right as leftmost contour is reference object
+(cnts, _) = contours.sort_contours(cnts)  
+
+# Remove contours which are not large enough
+cnts = [x for x in cnts if cv2.contourArea(x) > 100]
+
+cv2.drawContours(img_edge, cnts, -1, (0,255,0), 3)
+
+cv2.imshow(" ", img_edge)
+cv2.waitKey(0) 
