@@ -12,4 +12,4 @@ an image with the measurements of the objects present in that image.
 
 
 # Authors-
-This project is a collaborative work of Shaira Lapus from Phillipines and Runjhun Ratawal from India.
+This project is a collaborative work of Shaira Lapus from Philippines and Runjhun Ratawal from India.
