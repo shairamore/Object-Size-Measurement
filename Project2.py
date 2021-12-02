@@ -15,8 +15,8 @@ while(result):
 videoCaptureObject.release()
 cv2.destroyAllWindows()
 
-#img_path = "NewPicture.jpg"
-img_path = "example_01.jpg"
+img_path = "NewPicture.jpg" #image path for dynamically clicked picture
+#img_path = "example_01.jpg"  #image path for example image(static) 
 image = cv2.imread(img_path)
 cv2.imshow('IMAGE ',image)  #syntax of imshow - imshow('name of the window',image)
 cv2.waitKey(0)
