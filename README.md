@@ -1,6 +1,6 @@
 # Object-Size-Measurement
 
-This project is based on Object Detection using Python Libraries (mainly OpenCV). In the project, we will be capturing a live image using a camera and the Python code will produce 
+This project is based on Object Detection using Python Libraries (mainly OpenCV). In the project, a live image will be captured using a camera and the Python code will produce 
 an image with the measurements of the objects present in that image.
 
 
