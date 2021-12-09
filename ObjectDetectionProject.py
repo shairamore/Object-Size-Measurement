@@ -6,8 +6,15 @@ import numpy as np
 import imutils
 import cv2
 
+
 videoCaptureObject = cv2.VideoCapture(0)  #here 1 represents secondary camera
 result = True
+
+# set the brightness of image captured by the camera
+videoCaptureObject.set(10,160)
+videoCaptureObject.set(3,1920)
+videoCaptureObject.set(4,1080)
+
 while(result):
     ret,frame = videoCaptureObject.read()
     cv2.imwrite("NewPicture.jpg",frame)
