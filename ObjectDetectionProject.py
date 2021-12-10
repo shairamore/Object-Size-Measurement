@@ -7,7 +7,7 @@ import imutils
 import cv2
 
 
-videoCaptureObject = cv2.VideoCapture(0)  #here 1 represents secondary camera
+videoCaptureObject = cv2.VideoCapture(0)  #here 0 is for primary camera of the system (Genrally the integrated webcam and use 1 if using a secondary camera
 result = True
 
 # set the brightness of image captured by the camera
@@ -84,5 +84,5 @@ for cnt in cnts:
 	cv2.putText(image, "{:.1f}cm".format(ht), (int(mid_pt_verticle[0] + 10), int(mid_pt_verticle[1])), 
 		cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
 
-cv2.imshow(' ',image)
+cv2.imshow(' ',image) #Getting the final image with the measurments.
 cv2.waitKey(0) 
