@@ -8,7 +8,7 @@ an image with the measurements of the objects present in that image.
 1. scipy.spatial.distance - For measuring the euclidean distance
 2. imutils - For perspective and Contours
 3. numpy
-4. cv2
+4. OpenCV (cv2)
 
 
 # Authors-
